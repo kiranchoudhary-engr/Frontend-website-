@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/style3.css">
+    <link rel="stylesheet" href="./css/themify-icons.css">
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <title>Skills</title>
+</head>
+<body class="home-two">    
+
+<!-- Header Start -->
+<header class="header abs-header">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                <a href="index.html" class="logo">
+                    <img src="./Project Assignment/Logo.png" alt="">
+                </a>
+            </div>
+            <div class="col-md-9">
+                <nav class="primary-menu">
+                    <a href="javascript:void(0);" class="mobile-menu"><i class="ti-menu"></i></a>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" style="background-color: orange;">Home</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="index.html">Education</a></li>
+                        <li><a href="index.html">Project</a></li>
+                        <li><a href="index.html">Recommendation</a></li>
+                        <li><a href="index.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End -->
+
+<section class="skills-section">
+    <h2>Skills & Languages</h2>
+    <p>Amet Minim Mollit Non Deserunt Ullamco Est Sit Aliqua Dolor Do Amet Sint...</p>
+
+    <div class="skills-container">
+        <div class="card">
+            <h3>Front End Development</h3>
+            <p>HTML <span>90%</span></p>
+            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            <p>CSS <span>85%</span></p>
+            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+            <p>JavaScript <span>80%</span></p>
+            <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+        </div>
+
+        <div class="card">
+            <h3>Languages</h3>
+            <p>Hindi <span>90%</span></p>
+            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            <p>English <span>85%</span></p>
+            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+        </div>
+
+        <div class="card">
+            <h3>Back End Development</h3>
+            <p>NodeJS <span>90%</span></p>
+            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+            <p>SSR <span>85%</span></p>
+            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+        </div>
+    </div>
+
+    <!-- Add Skill Button -->
+    <button class="add-skill-btn" id="openModalBtn">Add Skill</button>
+</section>
+
+<!-- Modal -->
+<div class="modal" id="addSkillModal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModalBtn">&times;</span>
+        <h2>Add Skill</h2>
+        <form id="skillForm">
+            <label for="domain">Domain</label>
+            <input type="text" id="domain" name="domain" placeholder="e.g., Front End Developer">
+
+            <label for="skills">Skills</label>
+            <div class="skill-inputs">
+                <input type="text" placeholder="Skill" name="skill1">
+                <input type="text" placeholder="Proficiency (%)" name="proficiency1">
+                <input type="text" placeholder="Skill" name="skill2">
+                <input type="text" placeholder="Proficiency (%)" name="proficiency2">
+                <input type="text" placeholder="Skill" name="skill3">
+                <input type="text" placeholder="Proficiency (%)" name="proficiency3">
+            </div>
+
+            <div class="modal-actions">
+                <button type="submit" class="add-skill-btn">Add Skill</button>
+                <button type="button" class="cancel-btn" id="cancelModalBtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('openModalBtn').addEventListener('click', function() {
+        document.getElementById('addSkillModal').style.display = 'block';
+    });
+
+    document.getElementById('closeModalBtn').addEventListener('click', function() {
+        document.getElementById('addSkillModal').style.display = 'none';
+    });
+
+    document.getElementById('cancelModalBtn').addEventListener('click', function() {
+        document.getElementById('addSkillModal').style.display = 'none';
+    });
+
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('addSkillModal')) {
+            document.getElementById('addSkillModal').style.display = 'none';
+        }
+    };
+</script>
+
+<footer>
+    <div class="footer-container">
+        <div class="logo-section">
+            <img src="./img/Bottom logo1.png" alt="Logo 1">
+            <img src="./img/Bottom logo2.png" alt="Logo 2">
+            <img src="./img/Bottom logo3.png" alt="Logo 3">
+            <img src="./img/Bottom logo4.png" alt="Logo 4">
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="./img/Logo.png" alt="Logo" class="footer-logo">
+                <div class="ratings">
+                    <div class="rating-item">
+                        <img src="./img/Rectangle 97.png" style="width: 100px;height:50px;" alt="Rating 1">
+                    </div>
+                    <p>4.5/5 Rating On Lorem</p>
+                    <div class="rating-item">
+                        <img src="./img/Rectangle 99.png" style="width: 100px;height:50px;" alt="Rating 2">
+                    </div>
+                    <p>9/10 Rating On Ipsum</p>
+                    <div class="rating-item">
+                        <img src="./img/Rectangle 100.png" style="width: 100px;height:50px;" alt="Rating 3">
+                    </div>
+                    <p>4.5/5 Rating On Dorel</p>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Recommendations</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Portfolio</h4>
+                <ul>
+                    <li><a href="#">Frontend Development</a></li>
+                    <li><a href="#">Backend Development</a></li>
+                    <li><a href="#">Website Design</a></li>
+                    <li><a href="#">Machine Learning</a></li>
+                    <li><a href="#">Problem Solving & DSA</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul class="social-icons-vertical">
+                    <li><a href="#"><img src="./img/LinkedIn.png" alt="LinkedIn"></a></li>
+                    <li><a href="#"><img src="./img/Instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="./img/Facebook.png" alt="Facebook"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 Copyright, All Right Reserved</p>
+    </div>
+</footer>
+</body>
+</html>
